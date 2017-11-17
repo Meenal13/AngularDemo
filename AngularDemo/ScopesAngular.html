@@ -1,0 +1,38 @@
+﻿
+<html>
+<head>
+    <title>Angular Scopes</title>
+</head>
+<body>
+
+    <div ng-app="mainApp" ng-controller="shapeController">
+        <h1>Shape Controller</h1>
+        <p>Message of shape Controller: {{message}}</p><br />
+        <p>Type of Shape Controller: {{type }}</p>
+
+        <div ng-controller="circleController">
+            <h1>Circle Controller</h1>
+            <p>{{message}}</p>
+        </div>
+        <div ng-controller="squareController">
+            <h1>Square Controller</h1>
+            <p>{{message}}</p>
+        </div>
+    </div>
+    <script src="Scripts/angular.min.js"></script>
+    <script>
+        var app = angular.module("mainApp", []);
+        app.controller("shapeController", function ($scope) {
+            $scope.message = "This is a shape controller";
+            $scope.type = "shape";
+        });
+        app.controller("circleController", function ($scope) {
+            $scope.message = "This is a circle controller";
+        });
+        app.controller("squareController", function ($scope) {
+            $scope.message = "This is a square controller";
+        });
+        </script>
+
+</body>
+</html>

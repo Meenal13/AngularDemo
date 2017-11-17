@@ -1,0 +1,40 @@
+﻿
+    
+    <table border="1">
+        <tr>
+            <td>Employeer Name:</td>
+            <td><input type="text" ng-model="employeename"></td>                
+        <tr>
+
+        <tr>
+            <td>Employee Age</td>
+            <td><input type="text" ng-model="employeeage"></td>
+        <tr>
+
+        <tr>
+            <td>Nationality</td>
+            <td><input type="text" ng-model="nationality"></td>
+        <tr>
+
+        <tr>
+            <td>PassTime</td>
+            <td>
+                <table border="1">
+                    <tr>
+                        <th>
+                            Name
+                            </th><th>Category</th>
+                        </tr>
+                    <tr ng-repeat="hobby in passtime.hobbies">
+                        <td>{{hobby.name}}</td>
+                        <td>{{hobby.cat}}</td>
+                        </tr>
+                    </table>
+            </td>
+        <tr>
+            <!--<tr>
+                <td></td>
+                <td><button ng-click="Reset()">Reset</button></td>
+                </tr>-->
+</table>      
+

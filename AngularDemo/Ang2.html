@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.min.js"></script>
+    <link href="Content/Site.css" rel="stylesheet" />
+    <style>
+        table, th, td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+            table tr:nth-child(odd) {
+                background-color: #f2f2f2;
+            }
+
+            table tr:nth-child(even) {
+                background-color: #ffffff;
+            }
+    </style>
+</head>
+<body>
+    <div ng-app="mainApp" ng-controller="practiceController">
+        <p>Enter your First Name:<input type="text" ng-model="practice.firstname"></p>
+        <p>Enter your Last Name:<input type="text" ng-model="practice.lastname"></p>
+        <p>Subjects</p>
+        <ol>
+            <li ng-repeat="sub in practice.subjects | filter:subjectname|orderBy:'marks'">
+                {{sub.name + ',marks='+sub.marks}}
+            </li>
+        </ol>
+        <br />
+        <br />
+        <p>Your Name is :{{practice.fullname()| uppercase}}</p>
+        <p>Your First Name is :{{practice.firstname | lowercase}}</p>
+        <p> Your fees is: {{practice.fees| currency}}</p>
+<h1>
+    Repeat Directive:ng-repeat
+    </h1>
+        <table>
+            <tr>
+                <td>Subjects</td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Marks</th>
+                        </tr>
+                        <tr ng-repeat="sub in practice.subjects">
+                            <td>{{sub.name}}</td>
+                            <td>{{sub.marks}}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+
+        <h1>
+            HTML DOM: ng-disabled,	ng-show,ng-hide,ng-click
+        </h1>	
+        <table>
+            <tr>
+                <td>
+
+                    <input type="checkbox" ng-model="enabledisablebutton">Disable Button
+
+                </td>
+                <td>
+                    <button ng-disabled="enabledisablebutton">Click Me!</button>
+                </td>
+                <td>ng-disabled</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" ng-model="showhide1"> Show Button
+                </td>
+                <td>
+                    <button ng-show="showhide1">Click Me!</button>
+                </td>
+                <td>ng-show</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" ng-model="showhide2">Hide Button
+
+                </td>
+                <td>
+                    <button ng-hide="showhide2">
+                        Click Me!
+                    </button>
+                </td>
+                <td>ng-hide</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Total clicks:{{clickcounter}}</p>
+                </td>
+                <td>
+                    <button ng-click="clickcounter = clickcounter + 1">Click Me!</button>
+                </td>
+                <td>ng-click</td>
+            </tr>
+        </table>
+
+    </div>
+    <script>
+
+        var newapp = angular.module('mainApp', []);
+        newapp.controller('practiceController', function ($scope) {
+            $scope.practice = {
+                firstname: 'Meenal',
+                lastname: 'Bubbar',
+                fees: 500,
+                subjects: [
+                    { name: 'Physics', marks: 70 },
+                    { name: 'Chemistry', marks: 50 },
+                    { name: 'Maths', marks: 65 }
+                ],
+                fullname: function () {
+                    var obj;
+                    obj = $scope.practice;
+                    return obj.firstname + " " + obj.lastname;
+                }
+
+
+            }
+        });
+
+
+    </script>
+</body>
+</html>

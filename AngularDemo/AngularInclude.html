@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.min.js"></script>
+</head>
+<body>
+    <h2>AngularJS Sample Application</h2>
+    <div ng-app="app" ng-controller="mnlController">
+        <div ng-include="'/includepage.html'">
+        </div>
+    </div>
+    <script>
+        var mnlapp = angular.module("app", []);
+        mnlapp.controller("mnlController", function ($scope) {
+            $scope.employeename = "Neha Sharma";
+            $scope.employeeage = 25;
+            $scope.nationality = "Indian";
+            $scope.passtime = {
+                hobbies: [
+                { name: "Sports", cat: "sports" },
+                { name: "Studying", cat: "knowledge" },
+                { name: "Books", cat: "Literature" }
+                ]
+            }
+            //$scope.Reset= function()
+            //{
+            //    $scope.employeename = "Neha Sharma";
+            //    $scope.employeeage = 25;
+            //    $scope.nationality = "Indian";
+            //}
+            //$scope.Reset();
+        });
+
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ER_Const" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=SERVER2012;Initial Catalog=ER_Const;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ER_ConstConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.customexams" Member="customexams">
+    <Type Name="customexam">
+      <Column Name="examid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="examname" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="catid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="syllabus" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="prerequisites" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="partner" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="ibillproductid" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="psproductid" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="comments" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="logo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="duration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="questioncount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="offline" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="randomtest" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="pagename" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="usepage" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="printname" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="resultpage" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="transcriptpage" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="showcorporate" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="courseware" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="coursepath" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="productId2CO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="priority" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="positioning" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="directions" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="haspassage" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="passagenum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="positive" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="odeskexam" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="recertification" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="isbeta" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="uploaddate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="passingmarks" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="examlanguage" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="masterexamid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="refid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="refid1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="foreignexamid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="elmlxmlname" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="isfn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="examenablepartners" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="commoncodelive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="isCronbach" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="JobTitleID" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="masterXmlfile" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SurCatPageUrl" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="addedby" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="isfreezed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="isfrree" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="addedbytest" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="flagged" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="flagerror" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="flagged1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="showendbtn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="idset" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="isidset" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="customexam_customquestionbank" Member="customquestionbanks" ThisKey="examid" OtherKey="examid" Type="customquestionbank" />
+      <Association Name="customexam_customquestionbank1" Member="customquestionbanks1" ThisKey="examid" OtherKey="examid" Type="customquestionbank" />
+      <Association Name="customexam_customquestionbank2" Member="customquestionbanks2" ThisKey="examid" OtherKey="examid" Type="customquestionbank" />
+      <Association Name="customexam_customquestionbank3" Member="customquestionbanks3" ThisKey="examid" OtherKey="examid" Type="customquestionbank" />
+      <Association Name="customexam_customquestionbank4" Member="customquestionbanks4" ThisKey="examid" OtherKey="examid" Type="customquestionbank" />
+      <Association Name="customexam_customquestionbank5" Member="customquestionbanks5" ThisKey="examid" OtherKey="examid" Type="customquestionbank" />
+      <Association Name="customexam_customquestionbank6" Member="customquestionbanks6" ThisKey="examid" OtherKey="examid" Type="customquestionbank" />
+      <Association Name="customexam_customquestionbank7" Member="customquestionbanks7" ThisKey="examid" OtherKey="examid" Type="customquestionbank" />
+      <Association Name="customexam_customquestionbank8" Member="customquestionbanks8" ThisKey="examid" OtherKey="examid" Type="customquestionbank" />
+      <Association Name="customexam_customquestionbank9" Member="customquestionbanks9" ThisKey="examid" OtherKey="examid" Type="customquestionbank" />
+      <Association Name="customexam_customquestionbank10" Member="customquestionbanks10" ThisKey="examid" OtherKey="examid" Type="customquestionbank" />
+      <Association Name="customexam_customquestionbank11" Member="customquestionbanks11" ThisKey="examid" OtherKey="examid" Type="customquestionbank" />
+    </Type>
+  </Table>
+  <Table Name="dbo.customadminuser" Member="customadminusers">
+    <Type Name="customadminuser">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="fname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="lname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="usrlevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="isadmin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="showlink" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="poolscore" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="startDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="endDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.customquestionbank" Member="customquestionbanks">
+    <Type Name="customquestionbank">
+      <Column Name="questionid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="question" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="a" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="b" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="c" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="d" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="e" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="f" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="g" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="h" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="ans" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="qtype" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="topicid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="difficulty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="module" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="subitem" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="textanswer" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="examid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="figure" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sound" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="explanation" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="passageId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="refid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="refid1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="islive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ispool" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="foreignquestionid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="demoanswer" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="codeanswer" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="reviewed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="showcalc" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="showcalc1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="customexam_customquestionbank" Member="customexam" ThisKey="examid" OtherKey="examid" Type="customexam" IsForeignKey="true" />
+      <Association Name="customexam_customquestionbank1" Member="customexam1" ThisKey="examid" OtherKey="examid" Type="customexam" IsForeignKey="true" />
+      <Association Name="customexam_customquestionbank2" Member="customexam2" ThisKey="examid" OtherKey="examid" Type="customexam" IsForeignKey="true" />
+      <Association Name="customexam_customquestionbank3" Member="customexam3" ThisKey="examid" OtherKey="examid" Type="customexam" IsForeignKey="true" />
+      <Association Name="customexam_customquestionbank4" Member="customexam4" ThisKey="examid" OtherKey="examid" Type="customexam" IsForeignKey="true" />
+      <Association Name="customexam_customquestionbank5" Member="customexam5" ThisKey="examid" OtherKey="examid" Type="customexam" IsForeignKey="true" />
+      <Association Name="customexam_customquestionbank6" Member="customexam6" ThisKey="examid" OtherKey="examid" Type="customexam" IsForeignKey="true" />
+      <Association Name="customexam_customquestionbank7" Member="customexam7" ThisKey="examid" OtherKey="examid" Type="customexam" IsForeignKey="true" />
+      <Association Name="customexam_customquestionbank8" Member="customexam8" ThisKey="examid" OtherKey="examid" Type="customexam" IsForeignKey="true" />
+      <Association Name="customexam_customquestionbank9" Member="customexam9" ThisKey="examid" OtherKey="examid" Type="customexam" IsForeignKey="true" />
+      <Association Name="customexam_customquestionbank10" Member="customexam10" ThisKey="examid" OtherKey="examid" Type="customexam" IsForeignKey="true" />
+      <Association Name="customexam_customquestionbank11" Member="customexam11" ThisKey="examid" OtherKey="examid" Type="customexam" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CustomSections" Member="CustomSections">
+    <Type Name="CustomSection">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sectionname" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="sectiondesc" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="examid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sectionid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="refid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="score" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="refid1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="subtype" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customtopic" Member="Customtopics">
+    <Type Name="Customtopic">
+      <Column Name="topicid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="topicname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="topicdesc" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="examid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sectionid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="refid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="scores" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="refid1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mastertopicid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="creationdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="foreigntopicid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="marge" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="merge" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="customtopicdesc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.customclientpool" Member="customclientpools">
+    <Type Name="customclientpool">
+      <Column Name="poolid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="poolname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="corpid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="pooltype" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="codesubtype" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="isERexam" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="erExamid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dateadded" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.customclientquestionbank" Member="customclientquestionbanks">
+    <Type Name="customclientquestionbank">
+      <Column Name="questionid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="question" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="a" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="b" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="c" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="d" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="e" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="f" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="g" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="h" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="ans" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="qtype" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="pooltopicid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="difficulty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="module" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="subitem" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="textanswer" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="poolid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="figure" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sound" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="explanation" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="passageId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="score" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="foreignquestionid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="foreignpoolid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="demoanswer" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="codeanswer" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="showcalc" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.customclientsections" Member="customclientsections">
+    <Type Name="customclientsection">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="poolsectionname" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="poolsectiondesc" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="poolid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="poolsectionid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="corpid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pooltype" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="score" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.customclienttopic" Member="customclienttopics">
+    <Type Name="customclienttopic">
+      <Column Name="topicid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="topicname" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="topicdesc" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="poolid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sectionid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="corpid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="creationdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

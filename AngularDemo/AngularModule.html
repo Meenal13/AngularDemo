@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.min.js"></script>
+    <script src="js/mainApp.js"></script>
+    <script src="js/studentController.js"></script>
+    <style>
+        table, th, td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+            table tr:nth-child(odd) {
+                background-color: #f2f2f2;
+            }
+
+            table tr:nth-child(even) {
+                background-color: #ffffff;
+            }
+    </style>
+</head>
+<body>
+    <div ng-app="mainApp" ng-controller="studentController">
+        <table>
+            <tr>
+                <td>
+                    Enter Your first Name:
+                </td>
+                <td>
+                    <input name="firstname" type="text" ng-model="student.firstname" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Your Last Name:
+                </td>
+                <td>
+                    <input name="lastname" type="text" ng-model="student.lastname" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Fees:
+                </td>
+                <td>
+                    <input name="fees" type="text" ng-model="student.fees |currency" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Subjects
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Marks</th>
+                        </tr>
+                        <tr ng-repeat="sub in student.subjects">
+                            <td>{{sub.name}}</td>
+                            <td>{{sub.marks}}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <!--<h3>AngularJS Forms</h3>
+    <div ng-app="newdata" ng-controller="dataController">
+
+       <form name="studentform" novalidate>
+        <table>
+            <tr>
+                <td>
+                    First Name :
+                </td>
+                <td>
+                    <input type="text" ng-model="firstname" required />
+                    <span style="color:red" ng-show="studentform.firstname.$dirty && studentform.firstname.$invalid" >
+                    <span ng-show="studentform.firstname.$error.required">First Name is required.</span>    
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td>
+                    <input type="text" ng-model="lastname" required />
+                    <span style="color:red" ng-show="studentform.lastname.$dirty && studentform.lastname.$invalid">
+                        <span ng-show="studentform.lastname.$error.required">Last Name is required.</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>Email Id</td>
+                <td><input type="text" ng-model="email" required />
+                <span style="color:red" ng-show="studentform.email.$dirty && studentform.email.$invalid">
+                    <span ng-show="studentform.email.$error.required">Email Id is required.</span>
+                    <span ng-show="studentform.email.$error.email">Invalid Email Address</span>
+                    </span>                
+                </td>               
+            </tr>
+            <tr>
+                <td><button ng-click="reset()">Reset</button></td>
+                <td>
+                    <button ng-disabled="studentform.firstname.$dirty && studentform.lastname.$invalid ||
+                             studentform.lastname.$dirty && student.lastname.$invalid || student.email.$dirty 
+                            && student.email.$invalid" ng-click="Submit()">Submit</button>
+                </td>
+                </tr>
+        </table>
+        
+           </form>
+
+
+    </div>
+    <script>
+        var newapp = angular.module("newdata", []);
+        newapp.controller("dataController", function ($scope) {
+            $scope.reset = function () {
+                $scope.firstname = "Meenal";
+                $scope.lastname = "Bubbar";
+                $scope.email = "mnlbbr@gmail.com";
+            }
+            $scope.reset();
+            $scope.Submit = function()
+            {
+                return "Hello Your Data is submitted."
+            }
+            $scope.Submit();
+        });
+        
+     
+   
+   
+
+
+    </script>-->
+
+</body>
+</html>

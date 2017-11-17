@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular Js First Application</title>
+
+    <script src="Scripts/angular.min.js"></script>
+</head>
+<body>
+    <h1>Sample Application</h1>
+    <br />
+    <h3>First Demo</h3>
+
+    <div ng-app="" ng-init="countries=[{name:'United States',code:'US'},{name:'United Kingdom',code:'UK'},{name:'Europe',code:'EU'}];quantity=5;cost=30;Roll_No=58">
+        <p>Enter your Name: <input type="text" ng-model="name"></p>
+        <p>Enter your EmailId: <input type="text" ng-model="email"></p>
+        <br />
+        <br />
+        <p>Hello, My name is <b><span ng-bind="name"></span>!</b></p>
+        <p>My Email id is <b><span ng-bind="email"></span></b></p>
+        <br />
+        <br />
+        <p>List of Countries with Code:</p>
+        <ol>
+            <li ng-repeat="c in countries">
+                {{'Country: '+c.name + ',Code: '+c.code}}
+            </li>
+        </ol>
+
+        <br />
+        <br />
+
+
+        <h3>Second Demo</h3>
+        <p>Name:<b><span ng-bind="name"></span></b></p>
+        <p>Expense on Books: Rs {{cost*quantity}}</p>
+        <p>Roll No: {{Roll_No}}</p>
+        </div>
+        <br />
+        <br />
+
+        <h3>Third Demo</h3>
+    <div ng-app="newAPP" ng-controller="practiceController">
+
+        <p>Enter Your First Name:<input type="text" ng-model="practice.firstName"></p>
+        <p>Enter Your Last Name: <input type="text" ng-model="practice.LastName"></p>
+        <br />
+        <br />
+        Your Name is : {{practice.FullName()}}
+    </div>
+    <div>
+        <h1>New Demo</h1>
+        </div>
+        </div>
+   
+        <script>
+            debugger;
+            var mainapp = angular.module("newAPP",[]);
+            mainapp.controller('practiceController', function ($scope) {
+                
+                $scope.practice = {
+                    firstName: "Meenal",
+                    LastName: "Bubbar",
+                    FullName: function () {
+                        var studentObject;
+                        studentObject = $scope.student;
+                        return studentObject.firstName + " " + studentObject.LastName;
+                    }
+                };
+            });
+
+
+       
+        </script>
+
+
+</body>
+</html>
+
+<!--<div ng-controller="PracticeController">
+    <h2>Welcome {{helloto.title}} to the world of Tutorialspoint.</h2>
+    <p>Hello, <b>{{helloto.newdata}}</b></p>
+    </div>
+<script>
+    angular.module("myapp", [])
+    .controller("PracticeController", function ($scope) {
+        $scope.helloto = {};
+        $scope.helloto.title = "AngularJS";
+        $scope.helloto.newdata = "Welcome to Expert Rating Solutions."
+        //$var.newdata = {};
+        //$var.newdata.title = "Welcome to Expert Rating Solutions";
+    });
+    </script>-->
